@@ -1,6 +1,8 @@
+let input=document.getElementById('input');
 async function data() {
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=5ac50daaba3b4c0b8a6205412250402&q=${input.value}&aqi=yes`);
+    // const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=5ac50daaba3b4c0b8a6205412250402&q=${input.value}&aqi=yes`);
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=98d8f76e2c1e46b591e80639250702&q=${input.value}`);
     const feed= await response.json();
     const {location,current} = feed;
     console.log(current);
